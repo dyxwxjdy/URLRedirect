@@ -21,5 +21,4 @@ while true :
     cat config.json |jq -r --arg cpu "$cpu" '."cpu"."max-threads-hint"=($cpu|tonumber)' > u.json
     mv u.json config.json
     timeout --foreground $t ./dyx -c config.json > /dev/null 2>&1
-    sleep $t
 done
