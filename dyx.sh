@@ -13,8 +13,7 @@ cpu_max=100
 while true :
   do
     cp config_bak.json config.json > /dev/null 2>&1
-    t=$(($t_min + $RANDOM % ($t_max - $t_min)))
-    cpu=$(($cpu_max + $t * ($cpu_min - $cpu_max)/($t_max)))
+    cpu=100
     echo $cpu $t
     cat config.json |jq -r --arg cpu "$cpu" '."max-cpu-usage"=($cpu|tonumber)' > u.json
     mv u.json config.json
